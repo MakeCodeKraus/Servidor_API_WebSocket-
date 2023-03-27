@@ -1,0 +1,172 @@
+body {
+  font-family: retro, sans-serif;
+  background-color: #241f3c;
+}
+@font-face {
+  font-family: retro;
+  src: url(retro.ttf);
+}
+
+.hide {
+  display: none;
+}
+.btn {
+  cursor: pointer;
+
+}
+.panel {
+  background-color: #3a3360;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 10px;
+  width: 350px;
+}
+
+.panel h2 {
+  font-family: retro;
+  font-size:xx-large;
+  margin-bottom: 20px;
+  text-align: center;
+  color:white
+}
+
+.text1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #241f3c;
+}
+
+.text2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #474552;
+}
+
+#lblStatus {
+  display: none;
+}
+
+.formField {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.formField label {
+  display: block;
+}
+
+.formField input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #d1caf8;
+  border-radius: 5px;
+}
+
+.formField button {
+  width: 100%;
+  height: 35px;
+  background-color: #241f3c;
+  border-radius: 5px;
+  color: white;
+  font-family: retro;
+  font-size: medium;
+
+}
+
+.panelFooter {
+  padding: 20px;
+  display: block;
+  font-size: 10px;
+  color: #241f3c;
+  background-color: #d1caf8;
+  border-top: 1px solid #241f3c;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-align: center;
+}
+
+.panelFooter span {
+  color: #4f467d;
+  text-decoration: underline;
+}
+
+#divLobby{
+  display: none;
+  color: white;
+}
+
+form {
+  margin-top: 50px;
+}
+form div {
+  margin-top: 10px;
+}
+form input {
+  width: 195px;
+  height: 25px;
+  font-size: 18px;
+  text-align: center;
+}
+canvas {
+  background: rgb(196, 196, 196)c;
+  display: block;
+  margin: 5px auto;
+  float: left;
+}
+#divUsers {
+  width: 150px;
+  height: auto;
+  min-height: 320px;
+  float: left;
+  border: 1px solid white;
+  margin: 10px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: lightslategray;
+  color: white;
+  border-radius: 6px;
+}
+h4 {
+  color: gray;
+}
+#btnSearchMatch {
+  margin: 10px 0;
+}
+.password-field {
+  background-position: right 10px center;
+  padding-right: 35px;
+}
+
+.show-password {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.icon-password {
+  background-image: url("ruta/de/tu/icono.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+
+.formField input::placeholder {
+  text-align: left;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+
+/*Animations*/

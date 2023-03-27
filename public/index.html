@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="divAutenticacion">
+            <div id="panelLogin" class="panel animate__animated">
+                <form name="formLogin" id="formLogin">
+                    <h2 class="text1">Log in</h2>
+                    <div id="lblStatus"></div>
+                    <div class="formField">
+                        <input name="username" placeholder="Username o email" />
+                    </div>
+                    <div class="formField">
+                        <input type="password" placeholder="Password" id="password" name="password" required>
+                        <span class="icon-password show-password"></span>
+                    </div>
+                    <div class="formField">
+                        <button onclick="goToLobby()"> Log In </button>
+                    </div>
+                </form>
+                <a class="panelFooter">¿Eres nuevo? &nbsp;
+                    <span class="btn" onclick="goToRegister()">Registrate</span>
+                </a>
+            </div>
+
+            <div id="panelRegistro" class="panel hide animate__animated">
+                <form name="formRegistro" id="formRegistro">
+                    <h2 class="text1">Sign UP</h2>
+                    <div id="lblStatus"></div>
+                    <div class="formField">
+                      <input name="username" placeholder="Username o email" />
+                    </div>
+                    <div class="formField">
+                      <input type="password" placeholder="Password" id="password" name="password" required>
+                      <span class="icon-password show-password"></span>
+                    </div>
+                    <div class="formField">
+                      <button onclick="goToLobby()"> Sign Up </button>
+                    </div>
+                </form>
+                <a class="panelFooter">¿Ya tienes cuenta? &nbsp;
+                    <span class="btn" onclick="goToLogin()">Inicia sesion</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="divLobby">
+        <h1>BIENVENIDO AL JUEGO</h1>
+        <p id="welcome-message"></p>
+        <script>
+            var username = localStorage.getItem('username');
+            var welcomeMessage = document.getElementById('welcome-message');
+            welcomeMessage.innerHTML = "" + username;
+        </script>
+        <div>
+            <button id="btnSearchMatch">Buscar Partida</button>
+            <h4><span id="lblOnlineUsersCount">0</span> Jugadores conectados | <span id="lblActiveMatches">0</span> Partidas en Juego</h4>
+            <div id="lblSeatching"></div>    
+        </div>
+        <div id="divUsers">
+            <h3>Jugadores Conectados:</h3>
+            <ul id="playerList"></ul>
+        </div>
+        <div id="divChat">
+            <h3>Sala de Chat:</h3>
+            <div id="chatMessages"></div>
+            <form id="chatForm">
+                <input type="text" id="chatInput" placeholder="Escriba su mensaje...">
+                <button1 type="submit" >Enviar</button1>
+            </form>
+        </div>
+    </div>
+    <div id="divGame"></div>
+</body>
+
+</html>
